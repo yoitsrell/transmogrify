@@ -12,6 +12,10 @@ describe('biggify', () => {
     expect(biggify(-100)).toBe(8900);
     expect(biggify(100)).toBe(9100);
   })
+
+  it(`isn't reassignable`, () => {
+    expect(() => biggify = 500).toThrow();
+  })
 })
 
 describe('nasafy', () => {
@@ -24,6 +28,10 @@ describe('nasafy', () => {
     expect(nasafy(0)).toEqual(['Blast off!'])
     expect(nasafy(-1000)).toEqual(['Blast off!'])
   })
+
+  it(`isn't reassignable`, () => {
+    expect(() => nasafy = 500).toThrow();
+  })
 })
 
 describe('reversify', () => {
@@ -31,6 +39,10 @@ describe('reversify', () => {
     expect(reversify('hello')).toBe('olleh')
     expect(reversify('colin jaffe')).toBe('effaj niloc')
     expect(reversify('How are you today?')).toBe('?yadot uoy era woH')
+  })
+
+  it(`isn't reassignable`, () => {
+    expect(() => reversify = 500).toThrow();
   })
 });
 
@@ -43,6 +55,10 @@ describe('titleify', () => {
   it(`handles previously uppercased words`, () => {
     expect(titleify('what even IS this??')).toBe('What Even Is This??');
     expect(titleify(`it's the BEST is what it is!`)).toBe(`It's The Best Is What It Is!`)
+  })
+
+  it(`isn't reassignable`, () => {
+    expect(() => titleify = 500).toThrow();
   })
 });
 
@@ -59,5 +75,9 @@ describe('crazify', () => {
 
   it(`doesn't count a space as a letter for counting purposes`, () => {
     expect(crazify('Messi is the best')).toBe('mEsSi Is ThE bEsT')
+  })
+
+  it(`isn't reassignable`, () => {
+    expect(() => crazify = 500).toThrow();
   })
 });

@@ -1,21 +1,27 @@
-const biggify = function(num) {
-  
+
+
+
+
+
+
+if (typeof biggify === 'undefined') {
+  biggify = undefined;
 }
 
-const nasafy = function(num) {
-  
+if (typeof nasafy === 'undefined') {
+  nasafy = undefined;
 }
 
-const reversify = function(str) {
-  
+if (typeof reversify === 'undefined') {
+  reversify = undefined;
 }
 
-const titleify = function(str) {
-  
+if (typeof titleify === 'undefined') {
+  titleify = undefined;
 }
 
-const crazify = function(str) {
-  
+if (typeof crazify === 'undefined') {
+  crazify = undefined;
 }
 
 
